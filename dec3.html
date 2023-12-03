@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Sign Up Form by Colorlib</title>
+
+<!-- Font Icon -->
+<link rel="stylesheet"
+	href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+<!-- Main css -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
+
+	<div class="main">
+
+		<!-- Sing in  Form -->
+		<section class="sign-in">
+			<div class="container">
+				<div class="signin-content">
+					
+
+					<div class="signin-form">
+						<h2 class="form-title">Student details</h2>
+						<form method="post" action="login" class="register-form"
+							id="login-form" onsubmit="saveData()">
+							<div class="form-group">
+								<label for="userid"><i
+									class="zmdi zmdi-account material-icons-name"></i></label> <input
+									type="number" name="ID" id="ID"
+									placeholder="Your ID" required="required"/>
+							</div>
+							<div class="form-group">
+								<label for="username"><i
+									class="zmdi zmdi-account material-icons-name"></i></label> <input
+									type="text" name="username" id="username"
+									placeholder="Your Name" required="required"/>
+							</div>
+							<div class="form-group">
+								<label for="phone_no"><i class="zmdi zmdi-lock"></i></label> <input
+									type="number" name="phone_no" id="phone_no"
+									placeholder="phone_no" required="required"/>
+							</div>
+							<div class="form-group">
+								<label for="Country"><i class="zmdi zmdi-lock"></i></label> <input
+									type="text" name="Country" id="Country"
+									placeholder="Country" required="required"/>
+							</div>
+							
+							<div class="form-group form-button">
+								<input type="submit" name="signin" id="signin"
+									class="form-submit" value="submit" type="submit"/>
+							</div>
+						</form>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- JS -->
+	<script>
+		// Function to save data to localStorage
+function saveData() {
+    // Get form values
+    var ID = document.getElementById('ID').value;
+    var name = document.getElementById('username').value;
+    var number = document.getElementById('phone_no').value;
+    var country = document.getElementById('Country').value;
+
+    // Retrieve existing data from localStorage or initialize an empty array
+    var existingData = JSON.parse(localStorage.getItem('userData')) || [];
+
+    // Add new data to the array
+    existingData.push({ ID:ID ,name: name, number: number ,country:country });
+
+    // Save the updated array back to localStorage
+    localStorage.setItem('userData', JSON.stringify(existingData));
+
+    // Clear the form fields
+    document.getElementById('ID').value = '';
+    document.getElementById('username').value = '';
+    document.getElementById('phone_no').value = '';
+    document.getElementById('Country').value = '';
+
+    // Prevent the form from submitting and refreshing the page
+    return false;
+}
+	</script>
+	
+</body>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
