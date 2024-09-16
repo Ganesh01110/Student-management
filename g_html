@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--nav bar-->
+    <header>
+        <a href="#" class="logo">
+            <img src="" alt="a logo exist">
+        </a>
+
+        <a class="navbar">
+            <a href="">manage student</a>
+            <a href="">add student</a>
+            <a href="">mark</a>
+        </a>
+
+        <a class="log">
+            <a><button href="login"> login</button></a>
+            <a><button href="logout">logout</button></a>
+        </a>
+    </header>
+    <div style="background-color: beige;">
+        <div style="display:flex ; background-color: rgb(173, 154, 154);">
+               <a style=" background-color:azure ; margin-left:92px;"><button href="">add</button></a>
+               <a style="background-color: beige; margin-left:700px;" class="search-container">
+                <form style="height:40px; padding:5px;"action="/action_page.php">
+                  <input style="height:30px;" type="text" placeholder="Search.." name="search">
+                  <button style="height:30px; margin-left:30px" type="submit">Submit</button>
+                </form>
+              </a>
+        </div>
+        
+        <table>
+            <tr>
+              <th>id</th>
+              <th>name</th>
+              <th>Phone no</th>
+              <th>country</th>
+              <th><button href=""></button></th>
+              <th><button href=""></button></th>
+              <th><button href=""></button></th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Jill</td>
+              <td>12345</td>
+              <td>india</td>
+              <td><button href="info">info</button></td>
+              <td><button href="update">update</button></td>
+              <td><button class="delete" href="delete">delete</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+              <td>Jill</td>
+              <td>12345</td>
+              <td>india</td>
+              <td><button href="info">info</button></td>
+              <td><button href="update">update</button></td>
+              <td><button class="delete" href="delete">delete</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Jill</td>
+                <td>12345</td>
+                <td>india</td>
+                <td><button href="info">info</button></td>
+                <td><button href="update">update</button></td>
+                <td><button class="delete" href="delete">delete</button></td>
+            </tr>
+          </table>
+
+    </div>
+</body>
+</html>
